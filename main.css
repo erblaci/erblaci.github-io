@@ -11,7 +11,8 @@ a,a:link,a:visited,a:link:active, a:visited:active{
     text-decoration: none;
 }
 img{
-    opacity: 0.5;
-    height: 25%;
-    width: 25%;
+    color:aliceblue;
+    opacity: 0.2;
+    height: 10%;
+    width: 10%;
 }
