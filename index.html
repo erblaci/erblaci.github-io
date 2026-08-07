@@ -7,8 +7,15 @@
         <h1 style="color: white;">
             Game
         </h1>
-        <p style="color: white;">What could be the first clue<a style="text-decoration: none;" href="almond.html">?</a></p>
+        <p style="color: white;">What could be the first clue<a style="text-decoration: none;" onclick="Next()">?</a></p>
 
         <p style="color: rgb(60, 54, 54);">Rules: you cannot download the website nor can you read the source code to solve this puzzle.<br>You can progress by writing the correct text in the url after the last /</bl></p>
+    
+        <p id="clue"></p>
     </body>
+    <script>
+        function Next(){
+            document.getElementById("clue").innerHTML= "62 75 6D 6D 65 72";
+        }
+    </script>
 </html>
