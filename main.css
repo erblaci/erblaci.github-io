@@ -13,6 +13,6 @@ a,a:link,a:visited,a:link:active, a:visited:active{
 img{
     color:aliceblue;
     opacity: 0.2;
-    height: 10%;
-    width: 10%;
+    height: 200px;
+    width: 200px;
 }
