@@ -10,3 +10,8 @@ a,a:link,a:visited,a:link:active, a:visited:active{
     color: white;
     text-decoration: none;
 }
+img{
+    opacity: 0.5;
+    height: 25%;
+    width: 25%;
+}
