@@ -6,15 +6,7 @@ body
 {
     background-color: black;
 }
-a{
+a,a:link,a:visited,a:link:active, a:visited:active{
     color: white;
-    text-decoration: none;
-}
-a:active{
-    color: white;
-    text-decoration: none;
-}
-a:visited{
-    color:white;
     text-decoration: none;
 }
