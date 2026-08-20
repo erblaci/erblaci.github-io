@@ -7,15 +7,45 @@
         <h1 style="color: white;">
             Game
         </h1>
-        <p style="color: white;">What could be the first clue<a style="text-decoration: none;" href="javascript:Next()">?</a></p>
-
+        <p style="color: white;">How many company members are there?(discord)</p>
+        <input id="answer" type="text"  oninput="javascript:Next()">
         <p style="color: rgb(60, 54, 54);">Rules: you cannot download the website nor can you read the source code to solve this puzzle.<br>You can progress by writing the correct text in the url after the last /</bl></p>
     
         <p style="color: rgb(60, 54, 54)" id="clue"></p>
     </body>
     <script>
-        function Next(){
-            document.getElementById("clue").innerHTML= "62 75 6D 6D 65 72 . 2^4, one of my favorite numbers.";
+            var count=9999;
+            var reply=""
+       async function Next(){
+
+            answer = document.getElementById("answer").value;
+            
+           // request.open('get','https://discord.com/api/v9/invites/sFxtDpKBbq?with_counts=true&with_expiration=true',true)
+         await fetch('https://discord.com/api/v9/invites/sFxtDpKBbq?with_counts=true&with_expiration=true').then((res)=>
+            {
+              return res.json();
+                
+                
+            }).then(data=>{
+                count = data["approximate_member_count"];
+            })
+           
+            if(answer==count){
+               reply="here is the clue: bummer";
+            }
+            else if(answer>count)
+            {
+                reply="less";
+            }else if(answer<count)
+            {
+                reply="more";
+            }
+
+             document.getElementById("clue").innerHTML=reply;
+            
+        }
+        async function HTTP() {
+            
         }
     </script>
 </html>
